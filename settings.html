@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MyHome</title>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="/css/style.css" />
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+	</head>
+
+	<body>
+		<h1 class="main-header">MyHome</h1>
+		<nav class="navigation-bar">
+			<ul>
+			    <li>
+			    	<a href='index.html' class="navigation-bar-child">
+			    		Dashboard
+					</a>
+				</li>
+			    <li>
+			    	<a href='history.html' class="navigation-bar-child">
+						History
+					</a>
+				</li>
+				<li>
+			    	<a href='alerts.html' class="navigation-bar-child">
+						Alerts
+					</a>
+				</li>
+				<li>
+			    	<a href='settings.html' class="selected navigation-bar-child">
+						Settings
+					</a>
+			    </li>
+			</ul>
+		</nav>
+
+		<div id="app" class="box" is-open="true">
+
+			
+
+			<card name="Living Room">	
+				
+				
+				<frequency-input name="Temperature Measure Freq."
+                    icon="fas fa-thermometer-three-quarters device"
+                    configPath="BMESensor/Temperature/Update"  
+                    units="min">
+                </frequency-input>
+ 
+                <frequency-input name="Air Conditioner System Toggle"
+                    icon="far fa-eye device"
+                    configPath="BMESensor/Temperature/Trigger" 
+                    units="ºC">
+                </frequency-input>
+
+				<div class="info">
+					<div class="icon">
+						<i class="fas fa-thermometer-three-quarters device"></i>	
+					</div>
+					<span class="data">
+						<span>Temperature Measure Freq.</span>
+					</span>
+					<span>X min</span>	
+				</div>
+				<div class="info">
+					<div class="icon">
+						<i class="far fa-eye device"></i>
+					</div>
+					<span class="data">
+						<span>Air Conditioner System Toggle</span>	
+					</span>
+					<span>X ºC</span>	
+				</div>			
+			</card>
+
+			<card name="Garden">
+				<div class="info">
+					<div class="icon">
+						<i class="fas fa-thermometer-three-quarters"></i>
+					</div>
+					<span class="data">
+						<span>Temperature Measure Freq.</span>
+					</span>
+					<span>X min</span>
+				</div>
+				<div class="info">
+					<div class="icon">
+						<img src="https://img.icons8.com/metro/15/000000/hygrometer.png"></i>
+					</div>
+					<span class="data">
+						<span>Humidity Measure Freq.</span>
+					</span>
+					<span>X min</span>
+				</div>
+				<div class="info">
+					<div class="icon">
+						<img src="https://img.icons8.com/metro/15/000000/atmospheric-pressure.png">
+					</div>
+					<span class="data">
+						<span>Pressure Measure Freq.</span>
+					</span>
+					<span>X min</span>
+				</div>
+			</card>
+			</div>
+
+		
+		
+		<script src="/js/app.js"></script>
+	</body>
+
+</html>
